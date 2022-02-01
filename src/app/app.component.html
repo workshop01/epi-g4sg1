@@ -1,0 +1,37 @@
+<!-- 1 - Liaison des données : affichage des variables -->
+<h1> {{ title }} </h1>
+<br>
+{{objet.titre}}
+<br>
+<input  value="{{title}}">
+
+<!-- 2 - Liaison des propriétés -->
+<input  [value]="title">
+
+<!-- 3 - liaison des evenements : click  -->
+<button (click)="test_click()" >Click here </button>
+<br>
+{{nb}}
+<br> 
+<button (click)="inc()">+</button> 
+<button (click)="dec()">-</button>
+<br>
+<!-- Les evenements : Keyup / keydown -->
+<input (keyup)="test_keyup($event)">
+<br>
+<!-- keyup.enter / keyup.space / keyup.esc / keyup.a ...... -->
+<input (keyup.enter)="test_keyup($event)">
+
+<br>
+<!-- les evenements : change -->
+
+<select (change)="test_change($event)">
+  <option>Option1</option>
+  <option>Option2</option>
+  <option>Option3</option>
+</select>
+
+
+
+
+
